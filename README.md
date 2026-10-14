@@ -1,4 +1,4 @@
-# Video Style Transfer Benchmark (v0.2 source release)
+# Video Style Transfer Benchmark
 
 A reproducible **training-free video style-transfer evaluation protocol** with a fixed DAVIS-2017 content split, reference-style images, and method-aware manifests. Informed by [UniVST](https://arxiv.org/abs/2410.20084), [FreeViS](https://arxiv.org/abs/2510.01686), [TokenFlow](https://arxiv.org/abs/2307.10373), and [EchoStyle](https://github.com/HKUST-C4G/EchoStyle).
 
