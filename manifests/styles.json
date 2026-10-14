@@ -4,53 +4,77 @@
     "name": "Ink wash",
     "reference_image": "data/styles/ink_wash.png",
     "style_prompt": "Monochrome Japanese and Chinese sumi-e ink wash painting, expressive deep-black brushstrokes, pale rice-paper texture, abundant negative space.",
-    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "source": "Wikimedia Commons documented artwork reference",
     "style_category": "stylized_art",
-    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
+    "source_description": "Landscape attributed to Sesshū Tōyō (Honolulu Museum of Art) by Sesshū Tōyō (attributed), converted to 768x768 padded PNG. Reference subject differs from the other style images.",
+    "artwork_title": "Landscape attributed to Sesshū Tōyō (Honolulu Museum of Art)",
+    "artwork_artist": "Sesshū Tōyō (attributed)",
+    "artwork_source_url": "https://commons.wikimedia.org/wiki/File:Landscape_attributed_to_Sesshu_Toyo%2C_Honolulu_Museum_of_Art.JPG",
+    "reference_license": "Public-domain artwork / verify media page"
   },
   {
     "id": "oil_impasto",
     "name": "Oil impasto",
     "reference_image": "data/styles/oil_impasto.png",
-    "style_prompt": "Vibrant oil impasto painting with thick visible palette knife ridges, saturated cobalt blue, orange sunset paint and heavily textured pigment.",
-    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "style_prompt": "Post-impressionist oil painting with bold expressive visible directional brushstrokes, richly saturated colors, and energetic contours.",
+    "source": "Wikimedia Commons documented artwork reference",
     "style_category": "stylized_art",
-    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
+    "source_description": "The Starry Night by Vincent van Gogh, converted to 768x768 padded PNG. Reference subject differs from the other style images.",
+    "artwork_title": "The Starry Night",
+    "artwork_artist": "Vincent van Gogh",
+    "artwork_source_url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "reference_license": "Public domain (PD-Art)"
   },
   {
     "id": "watercolor",
     "name": "Watercolor",
     "reference_image": "data/styles/watercolor.png",
     "style_prompt": "Soft translucent watercolor washes on white textured paper, bleeding pigment edges and diluted pastel colors.",
-    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "source": "Wikimedia Commons documented artwork reference",
     "style_category": "stylized_art",
-    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
+    "source_description": "Gloucester Harbor (1873, watercolor) by Winslow Homer, converted to 768x768 padded PNG. Reference subject differs from the other style images.",
+    "artwork_title": "Gloucester Harbor (1873, watercolor)",
+    "artwork_artist": "Winslow Homer",
+    "artwork_source_url": "https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_Gloucester_Harbor_(1873%2C_watercolour).jpg",
+    "reference_license": "Public domain (PD-Art)"
   },
   {
     "id": "comic_cel",
     "name": "Comic cel shading",
     "reference_image": "data/styles/comic_cel.png",
-    "style_prompt": "Graphic-novel cel shading with dark bold outlines, solid high-saturation color fields and sharp shadow boundaries.",
-    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "style_prompt": "Vintage full-color comic illustration, inked outlines, flat illustrative fills, printed comic-art graphic treatment (reference: Winsor McCay, not modern cel shading).",
+    "source": "Wikimedia Commons documented artwork reference",
     "style_category": "stylized_art",
-    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
+    "source_description": "Little Nemo in Slumberland (1908, panels 11–15) by Winsor McCay, converted to 768x768 padded PNG. Reference subject differs from the other style images.",
+    "artwork_title": "Little Nemo in Slumberland (1908, panels 11–15)",
+    "artwork_artist": "Winsor McCay",
+    "artwork_source_url": "https://commons.wikimedia.org/wiki/File:Little_Nemo_in_Slumberland_(1908-07-26)_panels_11_to_15.jpg",
+    "reference_license": "Public domain (US); historical comic, not modern cel-shaded animation"
   },
   {
     "id": "cubism",
     "name": "Cubism",
     "reference_image": "data/styles/cubism.png",
     "style_prompt": "Angular geometric cubist painting, fractured triangular planes, overlapping hard-edged shapes and abstracted perspective.",
-    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "source": "Wikimedia Commons documented artwork reference",
     "style_category": "stylized_art",
-    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
+    "source_description": "Cubist Still Life (1915) by Juan Gris, converted to 768x768 padded PNG. Reference subject differs from the other style images.",
+    "artwork_title": "Cubist Still Life (1915)",
+    "artwork_artist": "Juan Gris",
+    "artwork_source_url": "https://commons.wikimedia.org/wiki/File:Juan_Gris_-_Cubist_Still_Life_(1915).jpg",
+    "reference_license": "Public domain (PD-Art)"
   },
   {
     "id": "pixel_art",
     "name": "Pixel art",
     "reference_image": "data/styles/pixel_art.png",
     "style_prompt": "Retro 16-bit pixel art with visible square pixel clusters, limited color palette, sharp edges and no smooth photorealistic shading.",
-    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "source": "Wikimedia Commons documented artwork reference",
     "style_category": "stylized_art",
-    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
+    "source_description": "Landscape pixel art (2026) by Fahmirayan, converted to 768x768 padded PNG. Reference subject differs from the other style images.",
+    "artwork_title": "Landscape pixel art (2026)",
+    "artwork_artist": "Fahmirayan",
+    "artwork_source_url": "https://commons.wikimedia.org/wiki/File:Landscape_pixel_art.png",
+    "reference_license": "CC BY-SA 4.0 — attribution and ShareAlike required"
   }
 ]
