@@ -86,8 +86,10 @@ def render(kind):
 def main():
     import argparse
     ap=argparse.ArgumentParser()
-    ap.add_argument("--force", action="store_true", help="Overwrite existing high-quality references (not recommended)")
+    ap.add_argument("--force", action="store_true", help="Disabled to protect curated artwork references")
     args=ap.parse_args()
+    if args.force:
+        raise SystemExit("Refusing --force: the repository includes curated artworks. Use install_style_artworks.py to refresh from documented sources.")
     target=ROOT/"data/styles"
     target.mkdir(parents=True,exist_ok=True)
     for name in ["ink_wash","oil_impasto","watercolor","comic_cel","cubism","pixel_art"]:
