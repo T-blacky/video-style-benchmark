@@ -1,3 +1,5 @@
+> **GitHub packaging note:** Six low-detail procedural PNG fallback images are included under `data/styles/`; high-detail AI style PNGs and seven smoke MP4s remain in the separate v0.2 companion ZIP. The 50 DAVIS real videos are intentionally excluded from GitHub.
+
 # Media rights, sources and restrictions
 
 **This file is critical before uploading media to a public GitHub repo.** Code and original utilities may be covered by the included MIT LICENSE; that does **not** automatically apply to third-party media or the original authors' videos.

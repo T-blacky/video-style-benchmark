@@ -1,3 +1,5 @@
+> **GitHub packaging note:** The repository includes 50-video and 300-pair manifests and six *procedural fallback* PNGs. Seven offline smoke-test videos and the distinct high-detail AI style PNGs are in a separately supplied companion ZIP, not checked into GitHub. Fifty DAVIS videos require downloading; the full evaluation set is not bundled.
+
 # Data card — Video Style Transfer Benchmark v0.2
 
 ## Intended uses

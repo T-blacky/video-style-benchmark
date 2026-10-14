@@ -4,47 +4,53 @@
     "name": "Ink wash",
     "reference_image": "data/styles/ink_wash.png",
     "style_prompt": "Monochrome Japanese and Chinese sumi-e ink wash painting, expressive deep-black brushstrokes, pale rice-paper texture, abundant negative space.",
-    "source": "Bundled reference in companion ZIP or generated locally by scripts/generate_styles.py",
-    "style_category": "stylized_art"
+    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "style_category": "stylized_art",
+    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
   },
   {
     "id": "oil_impasto",
     "name": "Oil impasto",
     "reference_image": "data/styles/oil_impasto.png",
     "style_prompt": "Vibrant oil impasto painting with thick visible palette knife ridges, saturated cobalt blue, orange sunset paint and heavily textured pigment.",
-    "source": "Bundled reference in companion ZIP or generated locally by scripts/generate_styles.py",
-    "style_category": "stylized_art"
+    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "style_category": "stylized_art",
+    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
   },
   {
     "id": "watercolor",
     "name": "Watercolor",
     "reference_image": "data/styles/watercolor.png",
     "style_prompt": "Soft translucent watercolor washes on white textured paper, bleeding pigment edges and diluted pastel colors.",
-    "source": "Bundled reference in companion ZIP or generated locally by scripts/generate_styles.py",
-    "style_category": "stylized_art"
+    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "style_category": "stylized_art",
+    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
   },
   {
     "id": "comic_cel",
     "name": "Comic cel shading",
     "reference_image": "data/styles/comic_cel.png",
     "style_prompt": "Graphic-novel cel shading with dark bold outlines, solid high-saturation color fields and sharp shadow boundaries.",
-    "source": "Bundled reference in companion ZIP or generated locally by scripts/generate_styles.py",
-    "style_category": "stylized_art"
+    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "style_category": "stylized_art",
+    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
   },
   {
     "id": "cubism",
     "name": "Cubism",
     "reference_image": "data/styles/cubism.png",
     "style_prompt": "Angular geometric cubist painting, fractured triangular planes, overlapping hard-edged shapes and abstracted perspective.",
-    "source": "Bundled reference in companion ZIP or generated locally by scripts/generate_styles.py",
-    "style_category": "stylized_art"
+    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "style_category": "stylized_art",
+    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
   },
   {
     "id": "pixel_art",
     "name": "Pixel art",
     "reference_image": "data/styles/pixel_art.png",
     "style_prompt": "Retro 16-bit pixel art with visible square pixel clusters, limited color palette, sharp edges and no smooth photorealistic shading.",
-    "source": "Bundled reference in companion ZIP or generated locally by scripts/generate_styles.py",
-    "style_category": "stylized_art"
+    "source": "Procedurally generated fallback image bundled in GitHub; high-detail reference exists in separate companion ZIP",
+    "style_category": "stylized_art",
+    "source_description": "Simplified mountain/lake/cabin schematic created programmatically to produce visibly distinct reference style categories; use high-detail companion for style-fidelity research."
   }
 ]

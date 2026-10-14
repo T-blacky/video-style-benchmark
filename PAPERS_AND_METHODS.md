@@ -28,7 +28,7 @@ Each generated image uses a similar mountain-lake-cabin composition: fewer seman
 
 ## Differences between a real benchmark and a smoke test
 
-The seven bundled MP4s and their 42 pairs are directly runnable with no network. They prove paths, decoding, prompts, masking on 3 synthetic clips, metadata and adapters function. They are not real-world comparisons. The 50 DAVIS MP4s are **not** bundled in this ZIP/GitHub starter. The acquisition script downloads them from the third-party Hugging Face DAVIS conversion; a complete materialized benchmark has **50 real MP4s** and 300 paired cases. The repo carries the full 50-video plan and the script, not a false claim that the files are already present.
+In the separately supplied companion ZIP, the seven MP4 smoke clips and their 42 pairs are runnable with no network. **They are not uploaded into the present GitHub source checkout.** They prove paths, decoding, prompts, masking on 3 synthetic clips, metadata and adapters function. They are not real-world comparisons. The 50 DAVIS MP4s are **not** bundled in the GitHub source checkout or companion ZIP. The acquisition script downloads them from the third-party Hugging Face DAVIS conversion; a complete materialized benchmark has **50 real MP4s** and 300 paired cases. The repo carries the full 50-video plan and the script, not a false claim that the files are already present.
 
 ## Reproducibility rules
 

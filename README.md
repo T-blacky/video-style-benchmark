@@ -2,7 +2,7 @@
 
 A reproducible **training-free video style-transfer evaluation protocol** with a fixed DAVIS-2017 content split, reference-style images, and method-aware manifests. Informed by [UniVST](https://arxiv.org/abs/2410.20084), [FreeViS](https://arxiv.org/abs/2510.01686), [TokenFlow](https://arxiv.org/abs/2307.10373), and [EchoStyle](https://github.com/HKUST-C4G/EchoStyle).
 
-> **Availability / reproducibility notice (read first):** This GitHub checkout contains the **protocol, code and 50-video/300-pair manifests**, but not the 50 DAVIS videos. Download them explicitly with `scripts/prepare_davis.py`. The high-detail AI-generated style references and seven offline smoke clips were supplied in the separately delivered `video-style-benchmark-v0.2.zip` companion package; these binary files were **not uploaded by this automated GitHub integration**. The repository offers a procedural six-style PNG *fallback* for running the pipeline without that ZIP. **Do not report the fallback PNGs as official style-reference data or as equivalent to the high-detail references.** No generated-video model outputs, trained models, or stylized ground truth are distributed.
+> **Availability / reproducibility notice (read first):** This GitHub checkout contains the **protocol, code and 50-video/300-pair manifests**, but not the 50 DAVIS videos. Download them explicitly with `scripts/prepare_davis.py`. The high-detail AI-generated style references and seven offline smoke clips were supplied in the separately delivered `video-style-benchmark-v0.2.zip` companion package; these binary files were **not uploaded by this automated GitHub integration**. The repository **now bundles six simplified procedural-style PNG fallback references** in `data/styles/` so an image-conditioned method can load images immediately; these are distinct from the original high-detail references in the companion ZIP. **Do not report the fallback PNGs as official style-reference data or as equivalent to the high-detail references.** No generated-video model outputs, trained models, or stylized ground truth are distributed.
 
 ## What is provided?
 
@@ -11,13 +11,13 @@ A reproducible **training-free video style-transfer evaluation protocol** with a
 | Fixed independent DAVIS source sequences | 50 | IDs, splits and downloadable filenames in JSON; MP4s require local download |
 | Video–style testing cases | 300 | Full JSON manifest, all combinations |
 | Fast screening split | 50 | One case per video, rotating through six styles |
-| Reference style categories | 6 | Manifest + local PNG fallback generator |
-| High-detail generated style PNGs | 6 | Only in companion ZIP, not this checkout |
+| Reference style categories | 6 | Six procedural PNGs included in `data/styles/` and a deterministic generator |
+| High-detail AI-generated style PNGs | 6 | Only in companion ZIP; GitHub includes different, procedural fallback PNGs |
 | Offline synthetic smoke video clips | 7 | Only in companion ZIP, not this checkout |
 | DAVIS object masks | Optional | Original annotations downloaded separately; not bundled |
 | Stylized target video / ground truth | 0 | No paired ground truth; do not claim reconstruction accuracy |
 
-Six deliberately visually distinct reference categories are **ink wash**, **thick oil impasto**, **watercolor**, **bold comic cel-shading**, **geometric cubism** and **retro pixel art**. The original AI-generated references in the companion ZIP share a similar mountain/lake/cabin composition to make the style signal easier to isolate. The repository's generated placeholders share a simplified scene and are clearly marked *fallback*.
+Six deliberately visually distinct reference categories are **ink wash**, **thick oil impasto**, **watercolor**, **bold comic cel-shading**, **geometric cubism** and **retro pixel art**. The original AI-generated references in the companion ZIP share a similar mountain/lake/cabin composition to make the style signal easier to isolate. The six included fallback PNGs depict a simplified shared mountain/lake/cabin scene and are clearly marked *fallback*.
 
 ## Quick start (download 50 real videos)
 
@@ -44,9 +44,21 @@ python scripts/validate.py
 
 A pilot run is not the complete benchmark; `--require-real` requires all 50. To use locally downloaded mirror MP4 files, run `python scripts/prepare_davis.py --input-dir /your/mp4/directory`.
 
+### Preview: included procedural reference PNGs
+
+These are **functional, programmatically rendered placeholders** for local inference smoke tests, not the high-detail AI reference images from the companion ZIP.
+
+| Ink wash | Thick oil impasto | Watercolor |
+|---|---|---|
+| ![Ink](data/styles/ink_wash.png) | ![Oil](data/styles/oil_impasto.png) | ![Watercolor](data/styles/watercolor.png) |
+
+| Comic cel | Cubism | Pixel art |
+|---|---|---|
+| ![Comic](data/styles/comic_cel.png) | ![Cubism](data/styles/cubism.png) | ![Pixel](data/styles/pixel_art.png) |
+
 ### Install original high-detail AI reference images and smoke videos
 
-If you have the separately supplied `video-style-benchmark-v0.2.zip`, extract its `data/styles/*.png`, `data/videos/*.mp4`, and, optionally, `data/preview/*` and `data/first_frame_masks/*` into this checkout. **Use the original six style PNGs for substantive style-fidelity testing.** The script `generate_styles.py` is a simplified procedural fallback only and *does not overwrite* existing PNGs unless `--force` is passed.
+If you have the separately supplied `video-style-benchmark-v0.2.zip`, extract its `data/styles/*.png`, `data/videos/*.mp4`, and, optionally, `data/preview/*` and `data/first_frame_masks/*` into this checkout. **Use the original six style PNGs for substantive style-fidelity testing.** The six fallback PNGs **are already checked into this repository**. The script `generate_styles.py` regenerates them only if files are missing, unless `--force` is passed.
 
 No automatic download for these AI-generated binary assets is published at present. Results should record whether **original companion styles** or **procedural fallback styles** were used; do not mix them in a reported comparison.
 
@@ -112,7 +124,7 @@ Detailed rules: [EVALUATION_PROTOCOL.md](EVALUATION_PROTOCOL.md) · [DATA_CARD.m
 │   ├── export_echostyle.py
 │   └── validate.py
 └── data/
-    ├── styles/              # created locally, PNG files not bundled in this source release
+    ├── styles/              # six included procedural PNG fallbacks; replace with companion ZIP for high-detail
     ├── real_videos/         # downloaded locally, gitignored
     └── reference_frames_davis/ # created on download
 ```
