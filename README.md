@@ -13,9 +13,6 @@ A reproducible **training-free video style-transfer evaluation protocol** with a
 | Fast screening split | 50 | One case per video, rotating through six styles |
 | Reference style categories | 6 | Six curated art-reference PNGs included in `data/styles/` |
 | Curated artwork reference PNGs | 6 | All six installed in GitHub; individual artwork credits in ASSET_LICENSES.md |
-| Offline synthetic smoke video clips | 7 | Only in companion ZIP, not this checkout |
-| DAVIS object masks | Optional | Original annotations downloaded separately; not bundled |
-| Stylized target video / ground truth | 0 | No paired ground truth; do not claim reconstruction accuracy |
 
 Six visually distinct reference categories are **ink wash**, **oil with pronounced visible brushwork**, **watercolor**, **comic-book illustration**, **cubism**, and **pixel art**. The actual images are documented works from Wikimedia Commons, not the earlier schematic drawings. **Unlike the previous prototypes, these are different artworks, not the same scene in six styles.** This improves visual style separability but introduces content/subject confounding, so treat this as a curated style-reference set, not a controlled same-content style study.
 
