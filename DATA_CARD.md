@@ -36,7 +36,3 @@ A repeatable training-free video stylization **evaluation framework** with six v
 - Style reference images are not positive stylized video samples; you cannot compute classical supervised paired-video PSNR/SSIM.
 - Style-transfer baseline code, model weights and semantic prompts appropriate to a specific diffusion implementation are not included.
 - Licensing varies across components; **do not blanket-license the entire repo's third-party media MIT**.
-
-## Recommended attribution
-
-If you use the real 50-video source component, cite DAVIS 2017 and check any individual source-specific credit requirements. When reporting the benchmark, describe it as **'our DAVIS-2017-derived 50-video style-transfer evaluation suite with six generated style references'**, not 'the official FreeViS/UniVST/TokenFlow benchmark'.
