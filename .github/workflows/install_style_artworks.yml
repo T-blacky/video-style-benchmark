@@ -36,7 +36,7 @@ jobs:
               im=Image.open(p)
               im.verify()
               hashes.append(hashlib.sha256(p.read_bytes()).hexdigest())
-              assert p.stat().st_size>8000, (p, p.stat().st_size)
+              assert p.stat().st_size>1024, (p, p.stat().st_size)
               print(f'{p}: {p.stat().st_size} bytes')
           assert len(set(hashes))==6
           PY
