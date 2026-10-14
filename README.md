@@ -14,8 +14,6 @@ A reproducible **training-free video style-transfer evaluation protocol** with a
 | Reference style categories | 6 | Six curated art-reference PNGs included in `data/styles/` |
 | Curated artwork reference PNGs | 6 | All six installed in GitHub; individual artwork credits in ASSET_LICENSES.md |
 
-Six visually distinct reference categories are **ink wash**, **oil with pronounced visible brushwork**, **watercolor**, **comic-book illustration**, **cubism**, and **pixel art**. The actual images are documented works from Wikimedia Commons, not the earlier schematic drawings. **Unlike the previous prototypes, these are different artworks, not the same scene in six styles.** This improves visual style separability but introduces content/subject confounding, so treat this as a curated style-reference set, not a controlled same-content style study.
-
 ## Quick start (download 50 real videos)
 
 Prerequisites: Python ≥ 3.10, FFmpeg with H.264 encode support installed on your PATH, internet access for Hugging Face (or local mirror video files). This dataset mirror declares **CC BY-NC 4.0**, noncommercial with attribution; check DAVIS source-specific rights before redistributing.
