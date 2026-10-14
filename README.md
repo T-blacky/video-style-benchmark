@@ -2,7 +2,7 @@
 
 A reproducible **training-free video style-transfer evaluation protocol** with a fixed DAVIS-2017 content split, reference-style images, and method-aware manifests. Informed by [UniVST](https://arxiv.org/abs/2410.20084), [FreeViS](https://arxiv.org/abs/2510.01686), [TokenFlow](https://arxiv.org/abs/2307.10373), and [EchoStyle](https://github.com/HKUST-C4G/EchoStyle).
 
-> **Availability / reproducibility notice (read first):** This GitHub checkout contains the **protocol, code and 50-video/300-pair manifests**, but not the 50 DAVIS videos. Download them explicitly with `scripts/prepare_davis.py`. The high-detail AI-generated style references and seven offline smoke clips were supplied in the separately delivered `video-style-benchmark-v0.2.zip` companion package; these binary files were **not uploaded by this automated GitHub integration**. The repository **now bundles six simplified procedural-style PNG fallback references** in `data/styles/` so an image-conditioned method can load images immediately; these are distinct from the original high-detail references in the companion ZIP. **Do not report the fallback PNGs as official style-reference data or as equivalent to the high-detail references.** No generated-video model outputs, trained models, or stylized ground truth are distributed.
+> **Availability / reproducibility notice:** This repository includes **six real artwork style-reference PNGs** in `data/styles/`, with detailed sources and licensing in [ASSET_LICENSES.md](ASSET_LICENSES.md). The 50 DAVIS video identities and 300 planned cases are documented, but actual DAVIS MP4s must be downloaded separately. The seven synthetic smoke-test clips exist only in the separately distributed v0.2 ZIP. This is an independent evaluation collection, **not** the cited papers' official benchmark or a dataset with matched stylized target videos.
 
 ## What is provided?
 
@@ -11,13 +11,13 @@ A reproducible **training-free video style-transfer evaluation protocol** with a
 | Fixed independent DAVIS source sequences | 50 | IDs, splits and downloadable filenames in JSON; MP4s require local download |
 | Video–style testing cases | 300 | Full JSON manifest, all combinations |
 | Fast screening split | 50 | One case per video, rotating through six styles |
-| Reference style categories | 6 | Six procedural PNGs included in `data/styles/` and a deterministic generator |
-| High-detail AI-generated style PNGs | 6 | Only in companion ZIP; GitHub includes different, procedural fallback PNGs |
+| Reference style categories | 6 | Six curated art-reference PNGs included in `data/styles/` |
+| Curated artwork reference PNGs | 6 | All six installed in GitHub; individual artwork credits in ASSET_LICENSES.md |
 | Offline synthetic smoke video clips | 7 | Only in companion ZIP, not this checkout |
 | DAVIS object masks | Optional | Original annotations downloaded separately; not bundled |
 | Stylized target video / ground truth | 0 | No paired ground truth; do not claim reconstruction accuracy |
 
-Six deliberately visually distinct reference categories are **ink wash**, **thick oil impasto**, **watercolor**, **bold comic cel-shading**, **geometric cubism** and **retro pixel art**. The original AI-generated references in the companion ZIP share a similar mountain/lake/cabin composition to make the style signal easier to isolate. The six included fallback PNGs depict a simplified shared mountain/lake/cabin scene and are clearly marked *fallback*.
+Six visually distinct reference categories are **ink wash**, **oil with pronounced visible brushwork**, **watercolor**, **comic-book illustration**, **cubism**, and **pixel art**. The actual images are documented works from Wikimedia Commons, not the earlier schematic drawings. **Unlike the previous prototypes, these are different artworks, not the same scene in six styles.** This improves visual style separability but introduces content/subject confounding, so treat this as a curated style-reference set, not a controlled same-content style study.
 
 ## Quick start (download 50 real videos)
 
@@ -27,7 +27,6 @@ Prerequisites: Python ≥ 3.10, FFmpeg with H.264 encode support installed on yo
 git clone https://github.com/T-blacky/video-style-benchmark.git
 cd video-style-benchmark
 python -m pip install -r requirements-download.txt
-python scripts/generate_styles.py
 python scripts/validate.py
 python scripts/prepare_davis.py --verify-remote-list
 python scripts/validate.py --require-real
@@ -44,9 +43,9 @@ python scripts/validate.py
 
 A pilot run is not the complete benchmark; `--require-real` requires all 50. To use locally downloaded mirror MP4 files, run `python scripts/prepare_davis.py --input-dir /your/mp4/directory`.
 
-### Preview: included procedural reference PNGs
+### Preview: bundled curated artwork references
 
-These are **functional, programmatically rendered placeholders** for local inference smoke tests, not the high-detail AI reference images from the companion ZIP.
+The six images below now reference actual paintings/comic/pixel art. They replace the earlier low-detail procedural placeholders. **Image subjects differ**, so evaluate style fidelity together with content leakage, not with pixel-level alignment.
 
 | Ink wash | Thick oil impasto | Watercolor |
 |---|---|---|
@@ -56,11 +55,19 @@ These are **functional, programmatically rendered placeholders** for local infer
 |---|---|---|
 | ![Comic](data/styles/comic_cel.png) | ![Cubism](data/styles/cubism.png) | ![Pixel](data/styles/pixel_art.png) |
 
-### Install original high-detail AI reference images and smoke videos
+### Reference-artwork sources and regeneration
 
-If you have the separately supplied `video-style-benchmark-v0.2.zip`, extract its `data/styles/*.png`, `data/videos/*.mp4`, and, optionally, `data/preview/*` and `data/first_frame_masks/*` into this checkout. **Use the original six style PNGs for substantive style-fidelity testing.** The six fallback PNGs **are already checked into this repository**. The script `generate_styles.py` regenerates them only if files are missing, unless `--force` is passed.
+Images in `data/styles/` are now part of the repository. For provenance, see [ASSET_LICENSES.md](ASSET_LICENSES.md) and `manifests/styles.json`. To refresh images from the same documented Wikimedia source artworks:
 
-No automatic download for these AI-generated binary assets is published at present. Results should record whether **original companion styles** or **procedural fallback styles** were used; do not mix them in a reported comparison.
+```bash
+python -m pip install Pillow requests
+python scripts/install_style_artworks.py
+```
+
+The six reference images are normalized to 768×768 with padding to avoid cropping the artwork. `scripts/generate_styles.py` is kept solely for legacy compatibility and **must not replace these curated images**. The GitHub Actions image installer ensures new source images are verified before being committed.
+
+The v0.2 companion ZIP's separately generated AI references are **different assets** and should not be mixed with the Wikimedia reference set during comparison. The original 7 smoke-test videos remain optional and external.
+
 
 ## Input schema
 
@@ -124,14 +131,14 @@ Detailed rules: [EVALUATION_PROTOCOL.md](EVALUATION_PROTOCOL.md) · [DATA_CARD.m
 │   ├── export_echostyle.py
 │   └── validate.py
 └── data/
-    ├── styles/              # six included procedural PNG fallbacks; replace with companion ZIP for high-detail
+    ├── styles/              # six curated real-artwork style PNGs (already included)
     ├── real_videos/         # downloaded locally, gitignored
     └── reference_frames_davis/ # created on download
 ```
 
 ### License and attribution
 
-Code in this repository is MIT licensed. That **does not apply** to DAVIS or other third-party videos. DAVIS footage comes via the linked community conversion with the declared **CC BY-NC 4.0** restriction and possible per-source exceptions. The procedural reference images are generated locally; high-detail style references were separately generated for the companion ZIP. Keep provenance for every experimental input and preserve appropriate citation and usage restrictions.
+Code in this repository is MIT licensed. That **does not apply** to DAVIS or other third-party videos. DAVIS footage comes via the linked community conversion with the declared **CC BY-NC 4.0** restriction and possible per-source exceptions. The included reference images are real artworks with individual public-domain or Creative Commons notices; the pixel-art example is CC BY-SA 4.0 and requires attribution. This image licensing is **separate** from the MIT code license. See ASSET_LICENSES.md. Keep provenance for every experimental input and preserve appropriate citation and usage restrictions.
 
 ### References
 
