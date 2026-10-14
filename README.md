@@ -61,9 +61,6 @@ python scripts/install_style_artworks.py
 
 The six reference images are normalized to 768×768 with padding to avoid cropping the artwork. `scripts/generate_styles.py` is kept solely for legacy compatibility and **must not replace these curated images**. The GitHub Actions image installer ensures new source images are verified before being committed.
 
-The v0.2 companion ZIP's separately generated AI references are **different assets** and should not be mixed with the Wikimedia reference set during comparison. The original 7 smoke-test videos remain optional and external.
-
-
 ## Input schema
 
 `manifests/real_300_planned.json` contains records like:
