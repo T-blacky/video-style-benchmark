@@ -1,0 +1,11 @@
+# Large third-party DAVIS footage must be downloaded locally and checked against its license.
+data/real_videos/
+data/reference_frames_davis/
+data/davis_masks/
+data/preview/davis/
+manifests/real_download_receipt.json
+manifests/real_eval_available.json
+manifests/real_eval_available.csv
+__pycache__/
+*.pyc
+.venv/
