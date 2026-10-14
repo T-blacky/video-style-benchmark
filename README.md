@@ -2,7 +2,7 @@
 
 A reproducible **training-free video style-transfer evaluation protocol** with a fixed DAVIS-2017 content split, reference-style images, and method-aware manifests. Informed by [UniVST](https://arxiv.org/abs/2410.20084), [FreeViS](https://arxiv.org/abs/2510.01686), [TokenFlow](https://arxiv.org/abs/2307.10373), and [EchoStyle](https://github.com/HKUST-C4G/EchoStyle).
 
-> **Availability / reproducibility notice:** This repository includes **six real artwork style-reference PNGs** in `data/styles/`. The 50 DAVIS video identities and 300 planned cases are documented, but actual DAVIS MP4s must be downloaded separately.
+> This repository includes **six real artwork style-reference PNGs** in `data/styles/`. The 50 DAVIS video identities and 300 planned cases are documented, but actual DAVIS MP4s must be downloaded separately.
 
 ## What is provided?
 
