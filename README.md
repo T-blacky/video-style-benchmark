@@ -128,10 +128,6 @@ Detailed rules: [EVALUATION_PROTOCOL.md](EVALUATION_PROTOCOL.md) · [DATA_CARD.m
     └── reference_frames_davis/ # created on download
 ```
 
-### License and attribution
-
-Code in this repository is MIT licensed. That **does not apply** to DAVIS or other third-party videos. DAVIS footage comes via the linked community conversion with the declared **CC BY-NC 4.0** restriction and possible per-source exceptions. The included reference images are real artworks with individual public-domain or Creative Commons notices; the pixel-art example is CC BY-SA 4.0 and requires attribution. This image licensing is **separate** from the MIT code license. See ASSET_LICENSES.md. Keep provenance for every experimental input and preserve appropriate citation and usage restrictions.
-
 ### References
 
 - UniVST: https://arxiv.org/abs/2410.20084
