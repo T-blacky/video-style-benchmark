@@ -26,17 +26,3 @@ The six bundled `data/styles/*.png` files **were replaced** on 2026-10-14 using 
 **IMPORTANT:** `pixel_art.png` is based on `Landscape pixel art.png` by **Fahmirayan**, licensed **CC BY-SA 4.0** ([license](https://creativecommons.org/licenses/by-sa/4.0/)). Its resized/letterboxed derivative is subject to the same license; retain this credit and distribute derivative image versions under CC BY-SA 4.0. MIT applies only to repository code, **not** to these artworks. The five historical artworks are identified on their Wikimedia Commons pages as public-domain or PD-Art; verify jurisdiction-dependent photographic-reproduction rights before further redistribution.
 
 Ink wash is an attribution and comic_cel is **historical comic art** (not a modern animation cel-shading reference). These are style exemplars, not matched-content paintings: subjects differ. Source file names and locations are also recorded in `manifests/styles.json`.
-
-
-## Seven offline smoke clips
-
-Four videos are simulations of camera motion on photographs distributed by `scikit-image.data`:
-
-- `astronaut_pan.mp4`: `skimage.data.astronaut`; NASA-associated sample (public-domain or no known restriction noted in scikit-image docs). This is NOT original filmed footage in this dataset.
-- `chelsea_pan.mp4`: `skimage.data.chelsea`; Stefan van der Walt, CC0 in scikit-image data docs.
-- `coffee_pan.mp4`: `skimage.data.coffee`; Rachel Michetti, CC0 in scikit-image data docs.
-- `rocket_pan.mp4`: `skimage.data.rocket`; SpaceX sample, publicly licensed as documented in the source scikit-image data docs.
-
-The clips `single_object.mp4`, `crossing_objects.mp4`, and `bouncing_object.mp4` and their masks were made from simple programmatic graphics for v0.1 smoke testing. Source reference: https://scikit-image.org/docs/stable/api/skimage.data.html
-
-**No video here should be falsely presented as an official paper test output.**
